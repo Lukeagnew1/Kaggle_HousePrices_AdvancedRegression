@@ -1,0 +1,73 @@
+Feature selection:
+
+
+-Features that have a correlation coefficient greater than .4 or less than -.4 with Saleprices (target)
+
+-All categorical features were initially one-hot-encoded. Then a correlation coeffcient between each column and salesprice was computed. If any value in a given column 
+scored greater than .4 or less than -.4 i included the column in the baseline model
+
+
+OverallQual     
+GrLivArea      
+GarageCars       
+GarageArea       
+TotalBsmtSF      
+1stFlrSF      
+FullBath        
+TotRmsAbvGrd     
+YearBuilt
+YearRemodAdd     
+GarageYrBlt         
+Neighborhood    
+BsmtFinType1   
+ExterQual        
+KitchenQual      
+BsmtQual        
+Foundation       
+GarageFinish   
+
+
+
+Replacing Null Values: 
+
+
+
+GarageYrBlt replaced with median 
+
+MasVnrArea replaced with mode 
+BsmtFinType1 replaced with mode 
+GarageFinish replaced with mode 
+BsmtQual replaced with mode 
+
+
+
+Categorical Encoding: 
+
+
+Neighborhood: Target Mean Encoding 
+BsmtFinType1: Target Mean Encoding 
+
+
+For ExterQual, KithcenQual, and BsmtQual, i began in each column by grouping the houses by the four distinct values in the column, then computing the average salesprice for each group. 
+The results for each column were then averaged amongest themselves. Using these newly calculated cumulative salesprice averages, i averaged the salesprice of each of the three quality features 
+based on the values corresponding average salesprice 
+
+Foundation: Target Mean Encoding 
+GarageFinish: Target Mean Encoding
+
+
+Decision Tree Regressor: 
+
+
+-Split Data (test_size = . 25)
+-Tune Parameters using sklearn GridSearch Cross Validation
+-Retune Parameters using sklearn GridSearch Cross Validation
+
+
+Final Steps: 
+
+Import and prep test data 
+Predict and extract results 
+
+
+
