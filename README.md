@@ -11,4 +11,4 @@ Given a training set which contains 79 features about different attributes for 1
 The data is from the Ames Housing Dataset compiled by Dean De Cock
 
 
-I built and optimized a Regression Decision Tree Algorithm. 
+I built and optimized a Decision Tree Regressor and Gradient Boosted Regressor. The Gradient Boosted Regressor performed better 
